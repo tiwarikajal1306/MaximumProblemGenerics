@@ -49,4 +49,10 @@ public class GenericProblemCheck {
         String[] stringArray = {"Peach", "Banana", "Apple"};
         Assert.assertEquals(stringArray[0],MaximumProblemGenericServices.MaximumStringValue(stringArray));
     }
+    @Test
+    public void givenThreeString_SecondPosition_ShouldReturnMaximum() {
+        value = new MaximumProblemGenericServices();
+        String[] stringArray = {"Banana", "Peach", "Apple"};
+        Assert.assertEquals(stringArray[1],MaximumProblemGenericServices.MaximumStringValue(stringArray));
+    }
 }
