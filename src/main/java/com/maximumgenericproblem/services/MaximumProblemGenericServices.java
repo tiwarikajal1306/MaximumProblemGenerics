@@ -3,31 +3,12 @@ package com.maximumgenericproblem.services;
 import com.maximumgenericproblem.MaximumProblemGeneric;
 
 public class MaximumProblemGenericServices extends MaximumProblemGeneric {
-    static Integer maximum = 0;
-    public static Integer findMaximumNumber(Integer[] intArray) {
-        for (Integer index : intArray) {
-            if (index.compareTo(maximum) > 0) {
-                maximum = index;
-            }
-        }
-        return maximum;
-    }
-    //LOGIC FOR FIND FLOAT MAXIMUM VALUE
-    public static Float MaximumFloatValue(Float[] floatArray) {
-        Float maximum=0f;
-        for (Float index : floatArray) {
-            if (index.compareTo(maximum) > 0) {
-                maximum = index;
-            }
-        }
-        return maximum;
-    }
-    //LOGIC FOR FIND STRING MAXIMUM VALUE
-    public static String MaximumStringValue(String[] stringArray) {
-        String maximum="";
-        for (String index : stringArray) {
-            if (index.compareTo(maximum) > 0) {
-                maximum = index;
+      static Integer maximum = 0;
+    public static <E extends Comparable>E maximumValue (E[] Array){
+        E maximum=Array[0];
+        for (E index:Array){
+            if (index.compareTo(maximum)>0){
+                maximum=index;
             }
         }
         return maximum;
