@@ -12,4 +12,14 @@ public class MaximumProblemGenericServices extends MaximumProblemGeneric {
         }
         return maximum;
     }
+    //LOGIC FOR FIND FLOAT MAXIMUM VALUE
+    public static Float MaximumFloatValue(Float[] floatArray) {
+        Float maximum=0f;
+        for (Float index : floatArray) {
+            if (index.compareTo(maximum) > 0) {
+                maximum = index;
+            }
+        }
+        return maximum;
+    }
 }

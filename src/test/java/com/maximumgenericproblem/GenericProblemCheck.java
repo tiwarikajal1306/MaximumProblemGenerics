@@ -25,4 +25,10 @@ public class GenericProblemCheck {
         Integer[] intArray = {20, 10, 30};
         Assert.assertEquals(intArray[2],MaximumProblemGenericServices.findMaximumNumber(intArray));
     }
+    @Test
+    public void givenThreeFloat_FirstPosition_ShouldReturnMaximum() {
+        value = new MaximumProblemGenericServices();
+        Float[] floatArray = {40.0f, 5.0f, 30.f};
+        Assert.assertEquals(floatArray[0],MaximumProblemGenericServices.MaximumFloatValue(floatArray));
+    }
 }
