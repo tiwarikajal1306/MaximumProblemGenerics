@@ -12,4 +12,3 @@ public class MaximumProblemGeneric {
         System.out.println("Maximum String value is" + " " + MaximumProblemGenericServices.maximumValue(Array2));
     }
 }
-

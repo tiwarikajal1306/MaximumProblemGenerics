@@ -20,6 +20,7 @@ public class MaximumProblemGenericServices extends MaximumProblemGeneric {
             max = null;
             max = Array[i];
         }
+        System.out.println(max);
         return max;
     }
 }
