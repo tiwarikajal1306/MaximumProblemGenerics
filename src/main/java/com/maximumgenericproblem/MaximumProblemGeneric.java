@@ -10,6 +10,9 @@ public class MaximumProblemGeneric {
        //FOR FLOAT VALUE
         Float[] floatArray = {40.0f, 5.0f, 30.f};
         System.out.println (MaximumProblemGenericServices.MaximumFloatValue(floatArray));
+        //For STRING VALUE
+        String[] stringArray = {"Banana", "Peach", "Apple"};
+        System.out.println(MaximumProblemGenericServices.MaximumStringValue(stringArray));
     }
 }
 

@@ -43,4 +43,10 @@ public class GenericProblemCheck {
         Float[] floatArray = {5.0f, 30.0f, 40.0f};
         Assert.assertEquals(floatArray[2],MaximumProblemGenericServices.MaximumFloatValue(floatArray));
     }
+    @Test
+    public void givenThreeString_FirstPosition_ShouldReturnMaximum() {
+        value = new MaximumProblemGenericServices();
+        String[] stringArray = {"Peach", "Banana", "Apple"};
+        Assert.assertEquals(stringArray[0],MaximumProblemGenericServices.MaximumStringValue(stringArray));
+    }
 }

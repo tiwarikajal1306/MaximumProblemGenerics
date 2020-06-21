@@ -22,4 +22,14 @@ public class MaximumProblemGenericServices extends MaximumProblemGeneric {
         }
         return maximum;
     }
+    //LOGIC FOR FIND STRING MAXIMUM VALUE
+    public static String MaximumStringValue(String[] stringArray) {
+        String maximum="";
+        for (String index : stringArray) {
+            if (index.compareTo(maximum) > 0) {
+                maximum = index;
+            }
+        }
+        return maximum;
+    }
 }
