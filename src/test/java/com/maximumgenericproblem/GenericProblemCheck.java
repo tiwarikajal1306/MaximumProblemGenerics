@@ -19,4 +19,10 @@ public class GenericProblemCheck {
         Integer[] intArray = {20, 30, 10};
         Assert.assertEquals(intArray[1],MaximumProblemGenericServices.findMaximumNumber(intArray));
     }
+    @Test
+    public void givenThreeInteger_ThirdPosition_ShouldReturnMaximum() {
+        value = new MaximumProblemGenericServices();
+        Integer[] intArray = {20, 10, 30};
+        Assert.assertEquals(intArray[2],MaximumProblemGenericServices.findMaximumNumber(intArray));
+    }
 }
