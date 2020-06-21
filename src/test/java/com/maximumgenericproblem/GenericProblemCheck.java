@@ -28,13 +28,19 @@ public class GenericProblemCheck {
     @Test
     public void givenThreeFloat_FirstPosition_ShouldReturnMaximum() {
         value = new MaximumProblemGenericServices();
-        Float[] floatArray = {40.0f, 5.0f, 30.f};
+        Float[] floatArray = {40.0f, 5.0f, 30.0f};
         Assert.assertEquals(floatArray[0],MaximumProblemGenericServices.MaximumFloatValue(floatArray));
     }
     @Test
     public void givenThreeFloat_SecondPosition_ShouldReturnMaximum() {
         value = new MaximumProblemGenericServices();
-        Float[] floatArray = {5.0f, 40.0f, 30.f};
+        Float[] floatArray = {5.0f, 40.0f, 30.0f};
         Assert.assertEquals(floatArray[1],MaximumProblemGenericServices.MaximumFloatValue(floatArray));
+    }
+    @Test
+    public void givenThreeFloat_ThirdPosition_ShouldReturnMaximum() {
+        value = new MaximumProblemGenericServices();
+        Float[] floatArray = {5.0f, 30.0f, 40.0f};
+        Assert.assertEquals(floatArray[2],MaximumProblemGenericServices.MaximumFloatValue(floatArray));
     }
 }
