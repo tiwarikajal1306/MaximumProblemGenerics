@@ -2,27 +2,24 @@ package com.maximumgenericproblem.services;
 
 import com.maximumgenericproblem.MaximumProblemGeneric;
 
-public class MaximumProblemGenericServices <E extends Comparable> extends MaximumProblemGeneric {
-    //public class Maximum<E extends Comparable> {
-        E firstVariable;
-        E secondVariable;
-        E thirdVariable;
-
-        //DECLARED PARAMETERIZED CONSTRUCTOR
-        public MaximumProblemGenericServices(E firstVariable, E secondVariable, E thirdVariable) {
-            this.firstVariable = firstVariable;
-            this.secondVariable = secondVariable;
-            this.thirdVariable = thirdVariable;
+public class MaximumProblemGenericServices extends MaximumProblemGeneric {
+    public static <E extends Comparable> E maximumValue(E[] Array) {
+        int length = Array.length;
+        E temp;
+        for (int i = 0; i < Array.length; i++) {
+            for (int j = i + 1; j < Array.length; j++) {
+                if (Array[i].compareTo(Array[j]) > 0) {
+                    temp = Array[i];
+                    Array[i] = Array[j];
+                    Array[j] = temp;
+                }
+            }
         }
-
-        public <E extends Comparable> E maximumValue() {
-
-            if (firstVariable.compareTo(secondVariable) > 0 && firstVariable.compareTo(thirdVariable) > 0)
-                return (E) firstVariable;
-            else if (secondVariable.compareTo(firstVariable) > 0 && secondVariable.compareTo(thirdVariable) > 0)
-                return (E) secondVariable;
-            else
-                return (E) thirdVariable;
+        E max = null;
+        for (int i = 0; i < Array.length; i++) {
+            max = null;
+            max = Array[i];
         }
+        return max;
     }
-//}
+}

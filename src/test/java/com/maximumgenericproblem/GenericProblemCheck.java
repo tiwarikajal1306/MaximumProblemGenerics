@@ -5,50 +5,49 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class GenericProblemCheck {
-    MaximumProblemGenericServices maximum;
     @Test
     public void givenThreeInteger_FirstPosition_ShouldReturnMaximum() {
-         maximum = new MaximumProblemGenericServices(30,20,10);
-        Assert.assertEquals(30,maximum.maximumValue());
+        Integer[] Array = {30, 20, 10};
+        Assert.assertEquals(Array[0],MaximumProblemGenericServices.maximumValue(Array));
     }
     @Test
     public void givenThreeInteger_SecondPosition_ShouldReturnMaximum() {
-      maximum = new MaximumProblemGenericServices(30,40,10);
-        Assert.assertEquals(40,maximum.maximumValue());
+        Integer[] Array = {20,30};
+        Assert.assertEquals(Array[1],MaximumProblemGenericServices.maximumValue(Array));
     }
     @Test
     public void givenThreeInteger_ThirdPosition_ShouldReturnMaximum() {
-       maximum = new MaximumProblemGenericServices(20,10,40);
-        Assert.assertEquals(40,maximum.maximumValue());
+        Integer[] Array = {10,20,80,50,45,76};
+        Assert.assertEquals(Array[2],MaximumProblemGenericServices.maximumValue(Array));
     }
     @Test
     public void givenThreeFloat_FirstPosition_ShouldReturnMaximum() {
-       maximum = new MaximumProblemGenericServices(30.5,20.5,10.5);
-        Assert.assertEquals(30.5,maximum.maximumValue());
+        Float[] Array = {30.5f,20.5f,10.5f};
+        Assert.assertEquals(Array[0],MaximumProblemGenericServices.maximumValue(Array));
     }
     @Test
     public void givenThreeFloat_SecondPosition_ShouldReturnMaximum() {
-        maximum = new MaximumProblemGenericServices(20.5,30.5,10.5);
-        Assert.assertEquals(30.5,maximum.maximumValue());
+        Float[] Array = {20.5f,30.5f,10.5f,4.5f,9.0f};
+        Assert.assertEquals(Array[1],MaximumProblemGenericServices.maximumValue(Array));
     }
     @Test
     public void givenThreeFloat_ThirdPosition_ShouldReturnMaximum() {
-      maximum = new MaximumProblemGenericServices(10.5,20.5,30.5);
-        Assert.assertEquals(30.5,maximum.maximumValue());
+        Float[] Array = {10.5f,20.5f,30.5f};
+        Assert.assertEquals(Array[2],MaximumProblemGenericServices.maximumValue(Array));
     }
     @Test
     public void givenThreeString_FirstPosition_ShouldReturnMaximum() {
-        maximum = new MaximumProblemGenericServices("Peach","Banana","Apple");
-        Assert.assertEquals("Peach",maximum.maximumValue());
+        String[] Array={"Peach", "Banana", "Apple"};
+        Assert.assertEquals(Array[0],MaximumProblemGenericServices.maximumValue(Array));
     }
     @Test
     public void givenThreeString_SecondPosition_ShouldReturnMaximum() {
-       maximum = new MaximumProblemGenericServices("Banana","Peach","Apple");
-        Assert.assertEquals("Peach",maximum.maximumValue());
+        String[] Array={"Banana", "Peach", "Apple","Mango"};
+        Assert.assertEquals(Array[1],MaximumProblemGenericServices.maximumValue(Array));
     }
     @Test
     public void givenThreeString_ThirdPosition_ShouldReturnMaximum() {
-       maximum = new MaximumProblemGenericServices("Apple","Banana","Peach");
-        Assert.assertEquals("Peach",maximum.maximumValue());
+        String[] Array={"Apple", "Banana", "Peach"};
+        Assert.assertEquals(Array[2],MaximumProblemGenericServices.maximumValue(Array));
     }
 }
