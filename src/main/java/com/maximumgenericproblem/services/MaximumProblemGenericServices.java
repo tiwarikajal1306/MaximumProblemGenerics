@@ -1,26 +1,17 @@
 package com.maximumgenericproblem.services;
 
-import com.maximumgenericproblem.MaximumProblemGeneric;
+import java.util.Arrays;
 
-public class MaximumProblemGenericServices extends MaximumProblemGeneric {
-    public static <E extends Comparable> E maximumValue(E[] Array) {
-        int length = Array.length;
-        E temp;
-        for (int i = 0; i < Array.length; i++) {
-            for (int j = i + 1; j < Array.length; j++) {
-                if (Array[i].compareTo(Array[j]) > 0) {
-                    temp = Array[i];
-                    Array[i] = Array[j];
-                    Array[j] = temp;
-                }
-            }
-        }
-        E max = null;
-        for (int i = 0; i < Array.length; i++) {
-            max = null;
-            max = Array[i];
-        }
-        System.out.println(max);
-        return max;
+public class MaximumProblemGenericServices <E extends Comparable>  {
+    E array[];
+
+    public MaximumProblemGenericServices(E... array) {
+       this.array = array;
+    }
+
+    public E maximumValue() {
+        Arrays.sort(array);
+        System.out.println(array[array.length-1]);
+        return array[array.length-1];
     }
 }
